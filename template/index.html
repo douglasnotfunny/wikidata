@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies List</title>
+</head>
+<body>
+    <h1>Movies:</h1>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>MOVIE</td>
+            <td>IMDB ID</td>
+            <td>YEAR</td>
+            <td>URL</td>
+        </tr>
+        {% for movie in movies %}
+        <tr>
+            <td>{{ movie.id }}</td>
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.imdb_id }}</td>
+            <td>{{ movie.year }}</td>
+            <td><a href="{{ movie.uri }}">{{ movie.uri }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
